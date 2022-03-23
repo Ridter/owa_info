@@ -154,10 +154,7 @@ class owa_info():
             if ecp_build is not None:
                 return self.versions[ecp_build]
             else:
-                return {'build': build, 'name': self.buildnumber_to_version(build)}
-
-            return self.versions[build]
-
+                return {'build': build, 'name': self.buildnumber_to_version(build)} 
         return None
 
     def testUrl(self):
@@ -171,7 +168,6 @@ class owa_info():
             self.hostname = o.netloc
             self.url = f'{o.scheme}://{o.netloc}/'
             return True
-
         else:
             print("[-] Target must be an HTTP(S) URL")
             return False
@@ -287,13 +283,12 @@ class owa_info():
         return HostInfo(cert=crypto_cert, peername=peername, hostname=hostname)
 
     def print_basic_info(self, hostinfo):
-        s = '''\n[+] Certinfo 👇\n\n»
+        s = '''\n[*] Certinfo:
 \tcommonName: {commonname}
 \tSAN: {SAN}
 \tissuer: {issuer}
 \tnotBefore: {notbefore}
-\tnotAfter:  {notafter}
-«        
+\tnotAfter:  {notafter}      
 '''.format(
                 hostname=hostinfo.hostname,
                 peername=hostinfo.peername,
@@ -351,46 +346,45 @@ class owa_info():
         FQDN = ".".join(LOCAL_NAME.split(".")[1:])
         if self.debug:
             print("[*] DomainName: {}".format(domain_name))
-        print("[+] Domain info  👇  \n")
-        print("[+] Domain FQDN   = {}".format(FQDN))
-        print("[+] Exchagne Computer Name = {}".format(computer_name))
+        print(f'''[*] Domain info:
+\tDomain FQDN   = {FQDN}
+\tExchagne Computer Name = {computer_name}
+''')
 
     def run(self):
-        print(f"[*] Checking {self.target}")
         if self.testUrl():
+            print(f"[*] Checking {self.target}")
             ex_version = self.get_owa_build(self.url)
             if not ex_version:
                 print("[-] Could not determine OWA version")
                 return
             build_number = ex_version['build']
-            print(f"[+] Build Number: {build_number}")
-            print(f"[+] OWA Version:  👉   {ex_version['name']}")
+            print(f'''[*] Version info:
+\tBuild Number: {build_number}
+\tOWA Version:  👉   {ex_version['name']}''')
             if ex_version.get('build_long'):
-                print(f"[+] Build Number long: {ex_version['build_long']}")
+                print(f"\tBuild Number long: {ex_version['build_long']}")
             if ex_version.get("release_date"):
-                print(f"[+] Release Date: {ex_version['release_date']}")
+                print(f"\tRelease Date: {ex_version['release_date']}")
             if ex_version.get("url"):
-                print(f"[+] Download URL: {ex_version['url']}")
+                print(f"\tDownload URL: {ex_version['url']}")
+            self.get_domain_info()
+            
             if self.ssl:
                 results = self.sslHost()        
             else:
                 results = self.plainHost()
+            if len(results) > 0:
+                for ip in results:
+                    if ipaddress.ip_address(ip).is_private:
+                        print(f"[+] Internal ip:\n\t👉  {ip}")
+            if self.ssl and self.host:
+                hostinfo = self.get_certificate(self.host, self.port)      
+                self.print_basic_info(hostinfo)  
+            
+            
         else:
-            print("Unable to proceed.  Please check your URL and try again")
             return
-
-        if len(results) > 0:
-            print("")
-            for ip in results:
-                if ipaddress.ip_address(ip).is_private:
-                    print(f"[+] We Got internal ip  👉  {ip}")
-
-        if self.ssl and self.host:
-            hostinfo = self.get_certificate(self.host, self.port)      
-            self.print_basic_info(hostinfo)  
-        
-        self.get_domain_info()
-
 
 def main():
     parser = argparse.ArgumentParser(description="OWA Info Scanner")
