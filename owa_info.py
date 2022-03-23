@@ -261,6 +261,8 @@ class owa_info():
     def get_issuer(self, cert):
         try:
             names = cert.issuer.get_attributes_for_oid(NameOID.COMMON_NAME)
+            if len(names) == 0:
+                return None
             return names[0].value
         except x509.ExtensionNotFound:
             return None
@@ -289,8 +291,7 @@ class owa_info():
 
     def print_basic_info(self, hostinfo):
         common_name = self.get_common_name(hostinfo.cert)
-        if not common_name:
-            return
+        issuer = self.get_issuer(hostinfo.cert)
         s = '''\n[*] Certinfo:
 \tcommonName: {commonname}
 \tSAN: {SAN}
@@ -300,9 +301,9 @@ class owa_info():
 '''.format(
                 hostname=hostinfo.hostname,
                 peername=hostinfo.peername,
-                commonname=common_name,
+                commonname=common_name if common_name else "None",
                 SAN=self.get_alt_names(hostinfo.cert),
-                issuer=self.get_issuer(hostinfo.cert),
+                issuer=issuer if issuer else "None",
                 notbefore=hostinfo.cert.not_valid_before,
                 notafter=hostinfo.cert.not_valid_after
         )
