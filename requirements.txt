@@ -1,0 +1,4 @@
+cryptography>=36.0.1
+idna>=3.3
+pyOpenSSL>=22.0.0
+requests>=2.27.0

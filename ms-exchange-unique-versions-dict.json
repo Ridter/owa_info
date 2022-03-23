@@ -1,0 +1,1640 @@
+{
+    "14.0.639.21": {
+        "build": "14.0.639.21",
+        "build_long": "14.00.0639.021",
+        "name": "Exchange Server 2010 RTM",
+        "release_date": "November 9, 2009",
+        "url": null
+    },
+    "14.0.682.1": {
+        "build": "14.0.682.1",
+        "build_long": "14.00.0682.001",
+        "name": "Update Rollup 1 for Exchange Server 2010",
+        "release_date": "December 9, 2009",
+        "url": null
+    },
+    "14.0.689.0": {
+        "build": "14.0.689.0",
+        "build_long": "14.00.0689.000",
+        "name": "Update Rollup 2 for Exchange Server 2010",
+        "release_date": "March 4, 2010",
+        "url": null
+    },
+    "14.0.694.0": {
+        "build": "14.0.694.0",
+        "build_long": "14.00.0694.000",
+        "name": "Update Rollup 3 for Exchange Server 2010",
+        "release_date": "April 13, 2010",
+        "url": null
+    },
+    "14.0.702.1": {
+        "build": "14.0.702.1",
+        "build_long": "14.00.0702.001",
+        "name": "Update Rollup 4 for Exchange Server 2010",
+        "release_date": "June 10, 2010",
+        "url": null
+    },
+    "14.0.726.0": {
+        "build": "14.0.726.0",
+        "build_long": "14.00.0726.000",
+        "name": "Update Rollup 5 for Exchange Server 2010",
+        "release_date": "December 13, 2010",
+        "url": null
+    },
+    "14.1.218.15": {
+        "build": "14.1.218.15",
+        "build_long": "14.01.0218.015",
+        "name": "Exchange Server 2010 SP1",
+        "release_date": "August 23, 2010",
+        "url": null
+    },
+    "14.1.255.2": {
+        "build": "14.1.255.2",
+        "build_long": "14.01.0255.002",
+        "name": "Update Rollup 1 for Exchange Server 2010 SP1",
+        "release_date": "October 4, 2010",
+        "url": null
+    },
+    "14.1.270.1": {
+        "build": "14.1.270.1",
+        "build_long": "14.01.0270.001",
+        "name": "Update Rollup 2 for Exchange Server 2010 SP1",
+        "release_date": "December 9, 2010",
+        "url": null
+    },
+    "14.1.289.7": {
+        "build": "14.1.289.7",
+        "build_long": "14.01.0289.007",
+        "name": "Update Rollup 3 for Exchange Server 2010 SP1",
+        "release_date": "April 6, 2011",
+        "url": null
+    },
+    "14.1.323.6": {
+        "build": "14.1.323.6",
+        "build_long": "14.01.0323.006",
+        "name": "Update Rollup 4 for Exchange Server 2010 SP1",
+        "release_date": "July 27, 2011",
+        "url": null
+    },
+    "14.1.339.1": {
+        "build": "14.1.339.1",
+        "build_long": "14.01.0339.001",
+        "name": "Update Rollup 5 for Exchange Server 2010 SP1",
+        "release_date": "August 23, 2011",
+        "url": null
+    },
+    "14.1.355.2": {
+        "build": "14.1.355.2",
+        "build_long": "14.01.0355.002",
+        "name": "Update Rollup 6 for Exchange Server 2010 SP1",
+        "release_date": "October 27, 2011",
+        "url": null
+    },
+    "14.1.421.0": {
+        "build": "14.1.421.0",
+        "build_long": "14.01.0421.000",
+        "name": "Update Rollup 7 for Exchange Server 2010 SP1",
+        "release_date": "August 8, 2012",
+        "url": null
+    },
+    "14.1.421.2": {
+        "build": "14.1.421.2",
+        "build_long": "14.01.0421.002",
+        "name": "Update Rollup 7 v2 for Exchange Server 2010 SP1",
+        "release_date": "October 10, 2012",
+        "url": null
+    },
+    "14.1.421.3": {
+        "build": "14.1.421.3",
+        "build_long": "14.01.0421.003",
+        "name": "Update Rollup 7 v3 for Exchange Server 2010 SP1",
+        "release_date": "November 13, 2012",
+        "url": null
+    },
+    "14.1.438.0": {
+        "build": "14.1.438.0",
+        "build_long": "14.01.0438.000",
+        "name": "Update Rollup 8 for Exchange Server 2010 SP1",
+        "release_date": "December 10, 2012",
+        "url": null
+    },
+    "14.2.247.5": {
+        "build": "14.2.247.5",
+        "build_long": "14.02.0247.005",
+        "name": "Exchange Server 2010 SP2",
+        "release_date": "December 4, 2011",
+        "url": null
+    },
+    "14.2.283.3": {
+        "build": "14.2.283.3",
+        "build_long": "14.02.0283.003",
+        "name": "Update Rollup 1 for Exchange Server 2010 SP2",
+        "release_date": "February 13, 2012",
+        "url": null
+    },
+    "14.2.298.4": {
+        "build": "14.2.298.4",
+        "build_long": "14.02.0298.004",
+        "name": "Update Rollup 2 for Exchange Server 2010 SP2",
+        "release_date": "April 16, 2012",
+        "url": null
+    },
+    "14.2.309.2": {
+        "build": "14.2.309.2",
+        "build_long": "14.02.0309.002",
+        "name": "Update Rollup 3 for Exchange Server 2010 SP2",
+        "release_date": "May 29, 2012",
+        "url": null
+    },
+    "14.2.318.2": {
+        "build": "14.2.318.2",
+        "build_long": "14.02.0318.002",
+        "name": "Update Rollup 4 for Exchange Server 2010 SP2",
+        "release_date": "August 13, 2012",
+        "url": null
+    },
+    "14.2.318.4": {
+        "build": "14.2.318.4",
+        "build_long": "14.02.0318.004",
+        "name": "Update Rollup 4 v2 for Exchange Server 2010 SP2",
+        "release_date": "October 9, 2012",
+        "url": null
+    },
+    "14.2.328.10": {
+        "build": "14.2.328.10",
+        "build_long": "14.02.0328.010",
+        "name": "Update Rollup 5 v2 for Exchange Server 2010 SP2",
+        "release_date": "December 10, 2012",
+        "url": null
+    },
+    "14.2.342.3": {
+        "build": "14.2.342.3",
+        "build_long": "14.02.0342.003",
+        "name": "Update Rollup 6 Exchange Server 2010 SP2",
+        "release_date": "February 12, 2013",
+        "url": null
+    },
+    "14.2.375.0": {
+        "build": "14.2.375.0",
+        "build_long": "14.02.0375.000",
+        "name": "Update Rollup 7 for Exchange Server 2010 SP2",
+        "release_date": "August 3, 2013",
+        "url": null
+    },
+    "14.2.390.3": {
+        "build": "14.2.390.3",
+        "build_long": "14.02.0390.003",
+        "name": "Update Rollup 8 for Exchange Server 2010 SP2",
+        "release_date": "December 9, 2013",
+        "url": null
+    },
+    "14.3.123.4": {
+        "build": "14.3.123.4",
+        "build_long": "14.03.0123.004",
+        "name": "Exchange Server 2010 SP3",
+        "release_date": "February 12, 2013",
+        "url": null
+    },
+    "14.3.146.0": {
+        "build": "14.3.146.0",
+        "build_long": "14.03.0146.000",
+        "name": "Update Rollup 1 for Exchange Server 2010 SP3",
+        "release_date": "May 29, 2013",
+        "url": null
+    },
+    "14.3.158.1": {
+        "build": "14.3.158.1",
+        "build_long": "14.03.0158.001",
+        "name": "Update Rollup 2 for Exchange Server 2010 SP3",
+        "release_date": "August 8, 2013",
+        "url": null
+    },
+    "14.3.169.1": {
+        "build": "14.3.169.1",
+        "build_long": "14.03.0169.001",
+        "name": "Update Rollup 3 for Exchange Server 2010 SP3",
+        "release_date": "November 25, 2013",
+        "url": null
+    },
+    "14.3.174.1": {
+        "build": "14.3.174.1",
+        "build_long": "14.03.0174.001",
+        "name": "Update Rollup 4 for Exchange Server 2010 SP3",
+        "release_date": "December 9, 2013",
+        "url": null
+    },
+    "14.3.181.6": {
+        "build": "14.3.181.6",
+        "build_long": "14.03.0181.006",
+        "name": "Update Rollup 5 for Exchange Server 2010 SP3",
+        "release_date": "February 24, 2014",
+        "url": null
+    },
+    "14.3.195.1": {
+        "build": "14.3.195.1",
+        "build_long": "14.03.0195.001",
+        "name": "Update Rollup 6 for Exchange Server 2010 SP3",
+        "release_date": "May 27, 2014",
+        "url": null
+    },
+    "14.3.210.2": {
+        "build": "14.3.210.2",
+        "build_long": "14.03.0210.002",
+        "name": "Update Rollup 7 for Exchange Server 2010 SP3",
+        "release_date": "August 26, 2014",
+        "url": null
+    },
+    "14.3.224.1": {
+        "build": "14.3.224.1",
+        "build_long": "14.03.0224.001",
+        "name": "Update Rollup 8 v1 for Exchange Server 2010 SP3 (recalled)",
+        "release_date": "December 9, 2014",
+        "url": "https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-releases-december-2014/ba-p/584630"
+    },
+    "14.3.224.2": {
+        "build": "14.3.224.2",
+        "build_long": "14.03.0224.002",
+        "name": "Update Rollup 8 v2 for Exchange Server 2010 SP3",
+        "release_date": "December 12, 2014",
+        "url": null
+    },
+    "14.3.235.1": {
+        "build": "14.3.235.1",
+        "build_long": "14.03.0235.001",
+        "name": "Update Rollup 9 for Exchange Server 2010 SP3",
+        "release_date": "March 17, 2015",
+        "url": null
+    },
+    "14.3.248.2": {
+        "build": "14.3.248.2",
+        "build_long": "14.03.0248.002",
+        "name": "Update Rollup 10 for Exchange Server 2010 SP3",
+        "release_date": "June 17, 2015",
+        "url": null
+    },
+    "14.3.266.2": {
+        "build": "14.3.266.2",
+        "build_long": "14.03.0266.002",
+        "name": "Update Rollup 11 for Exchange Server 2010 SP3",
+        "release_date": "September 15, 2015",
+        "url": null
+    },
+    "14.3.279.2": {
+        "build": "14.3.279.2",
+        "build_long": "14.03.0279.002",
+        "name": "Update Rollup 12 for Exchange Server 2010 SP3",
+        "release_date": "December 15, 2015",
+        "url": null
+    },
+    "14.3.294.0": {
+        "build": "14.3.294.0",
+        "build_long": "14.03.0294.000",
+        "name": "Update Rollup 13 for Exchange Server 2010 SP3",
+        "release_date": "March 15, 2016",
+        "url": null
+    },
+    "14.3.301.0": {
+        "build": "14.3.301.0",
+        "build_long": "14.03.0301.000",
+        "name": "Update Rollup 14 for Exchange Server 2010 SP3",
+        "release_date": "June 21, 2016",
+        "url": null
+    },
+    "14.3.319.2": {
+        "build": "14.3.319.2",
+        "build_long": "14.03.0319.002",
+        "name": "Update Rollup 15 for Exchange Server 2010 SP3",
+        "release_date": "September 20, 2016",
+        "url": null
+    },
+    "14.3.328.5": {
+        "build": "14.3.328.5",
+        "build_long": "14.03.0328.005",
+        "name": "Update Rollup 5 for Exchange Server 2010 SP2",
+        "release_date": "November 13, 2012",
+        "url": null
+    },
+    "14.3.336.0": {
+        "build": "14.3.336.0",
+        "build_long": "14.03.0336.000",
+        "name": "Update Rollup 16 for Exchange Server 2010 SP3",
+        "release_date": "December 13, 2016",
+        "url": null
+    },
+    "14.3.352.0": {
+        "build": "14.3.352.0",
+        "build_long": "14.03.0352.000",
+        "name": "Update Rollup 17 for Exchange Server 2010 SP3",
+        "release_date": "March 21, 2017",
+        "url": null
+    },
+    "14.3.361.1": {
+        "build": "14.3.361.1",
+        "build_long": "14.03.0361.001",
+        "name": "Update Rollup 18 for Exchange Server 2010 SP3",
+        "release_date": "July 11, 2017",
+        "url": null
+    },
+    "14.3.382.0": {
+        "build": "14.3.382.0",
+        "build_long": "14.03.0382.000",
+        "name": "Update Rollup 19 for Exchange Server 2010 SP3",
+        "release_date": "December 19, 2017",
+        "url": null
+    },
+    "14.3.389.1": {
+        "build": "14.3.389.1",
+        "build_long": "14.03.0389.001",
+        "name": "Update Rollup 20 for Exchange Server 2010 SP3",
+        "release_date": "March 5, 2018",
+        "url": null
+    },
+    "14.3.399.2": {
+        "build": "14.3.399.2",
+        "build_long": "14.03.0399.002",
+        "name": "Update Rollup 21 for Exchange Server 2010 SP3",
+        "release_date": "May 7, 2018",
+        "url": null
+    },
+    "14.3.411.0": {
+        "build": "14.3.411.0",
+        "build_long": "14.03.0411.000",
+        "name": "Update Rollup 22 for Exchange Server 2010 SP3",
+        "release_date": "June 19, 2018",
+        "url": "https://www.microsoft.com/download/details.aspx?id=57065"
+    },
+    "14.3.417.1": {
+        "build": "14.3.417.1",
+        "build_long": "14.03.0417.001",
+        "name": "Update Rollup 23 for Exchange Server 2010 SP3",
+        "release_date": "August 13, 2018",
+        "url": "https://www.microsoft.com/download/details.aspx?id=57219"
+    },
+    "14.3.419.0": {
+        "build": "14.3.419.0",
+        "build_long": "14.03.0419.000",
+        "name": "Update Rollup 24 for Exchange Server 2010 SP3",
+        "release_date": "September 5, 2018",
+        "url": "https://www.microsoft.com/download/details.aspx?id=57306"
+    },
+    "14.3.435.0": {
+        "build": "14.3.435.0",
+        "build_long": "14.03.0435.000",
+        "name": "Update Rollup 25 for Exchange Server 2010 SP3",
+        "release_date": "January 8, 2019",
+        "url": "https://www.microsoft.com/download/details.aspx?id=57759"
+    },
+    "14.3.442.0": {
+        "build": "14.3.442.0",
+        "build_long": "14.03.0442.000",
+        "name": "Update Rollup 26 for Exchange Server 2010 SP3",
+        "release_date": "February 12, 2019",
+        "url": "https://www.microsoft.com/download/details.aspx?id=57824"
+    },
+    "14.3.452.0": {
+        "build": "14.3.452.0",
+        "build_long": "14.03.0452.000",
+        "name": "Update Rollup 27 for Exchange Server 2010 SP3",
+        "release_date": "April 9, 2019",
+        "url": "https://www.microsoft.com/download/details.aspx?id=58196"
+    },
+    "14.3.461.1": {
+        "build": "14.3.461.1",
+        "build_long": "14.03.0461.001",
+        "name": "Update Rollup 28 for Exchange Server 2010 SP3",
+        "release_date": "June 7, 2019",
+        "url": "https://www.microsoft.com/download/details.aspx?id=58354"
+    },
+    "14.3.468.0": {
+        "build": "14.3.468.0",
+        "build_long": "14.03.0468.000",
+        "name": "Update Rollup 29 for Exchange Server 2010 SP3",
+        "release_date": "July 9, 2019",
+        "url": "https://www.microsoft.com/download/details.aspx?id=58476"
+    },
+    "14.3.496.0": {
+        "build": "14.3.496.0",
+        "build_long": "14.03.0496.000",
+        "name": "Update Rollup 30 for Exchange Server 2010 SP3",
+        "release_date": "February 11, 2020",
+        "url": "https://www.microsoft.com/download/details.aspx?id=100910"
+    },
+    "14.3.509.0": {
+        "build": "14.3.509.0",
+        "build_long": "14.03.0509.000",
+        "name": "Update Rollup 31 for Exchange Server 2010 SP3",
+        "release_date": "December 1, 2020",
+        "url": "https://www.microsoft.com/download/details.aspx?id=102519"
+    },
+    "14.3.513.0": {
+        "build": "14.3.513.0",
+        "build_long": "14.03.0513.000",
+        "name": "Update Rollup 32 for Exchange Server 2010 SP3",
+        "release_date": "March 2, 2021",
+        "url": "https://www.microsoft.com/download/details.aspx?id=102774"
+    },
+    "15.0.1044.25": {
+        "build": "15.0.1044.25",
+        "build_long": "15.00.1044.025",
+        "name": "Exchange Server 2013 CU7",
+        "release_date": "December 9, 2014",
+        "url": null
+    },
+    "15.0.1076.9": {
+        "build": "15.0.1076.9",
+        "build_long": "15.00.1076.009",
+        "name": "Exchange Server 2013 CU8",
+        "release_date": "March 17, 2015",
+        "url": null
+    },
+    "15.0.1104.5": {
+        "build": "15.0.1104.5",
+        "build_long": "15.00.1104.005",
+        "name": "Exchange Server 2013 CU9",
+        "release_date": "June 17, 2015",
+        "url": null
+    },
+    "15.0.1130.7": {
+        "build": "15.0.1130.7",
+        "build_long": "15.00.1130.007",
+        "name": "Exchange Server 2013 CU10",
+        "release_date": "September 15, 2015",
+        "url": null
+    },
+    "15.0.1156.6": {
+        "build": "15.0.1156.6",
+        "build_long": "15.00.1156.006",
+        "name": "Exchange Server 2013 CU11",
+        "release_date": "December 15, 2015",
+        "url": null
+    },
+    "15.0.1178.4": {
+        "build": "15.0.1178.4",
+        "build_long": "15.00.1178.004",
+        "name": "Exchange Server 2013 CU12",
+        "release_date": "March 15, 2016",
+        "url": null
+    },
+    "15.0.1210.3": {
+        "build": "15.0.1210.3",
+        "build_long": "15.00.1210.003",
+        "name": "Exchange Server 2013 CU13",
+        "release_date": "June 21, 2016",
+        "url": null
+    },
+    "15.0.1236.3": {
+        "build": "15.0.1236.3",
+        "build_long": "15.00.1236.003",
+        "name": "Exchange Server 2013 CU14",
+        "release_date": "September 20, 2016",
+        "url": null
+    },
+    "15.0.1263.5": {
+        "build": "15.0.1263.5",
+        "build_long": "15.00.1263.005",
+        "name": "Exchange Server 2013 CU15",
+        "release_date": "December 13, 2016",
+        "url": null
+    },
+    "15.0.1293.2": {
+        "build": "15.0.1293.2",
+        "build_long": "15.00.1293.002",
+        "name": "Exchange Server 2013 CU16",
+        "release_date": "March 21, 2017",
+        "url": null
+    },
+    "15.0.1320.4": {
+        "build": "15.0.1320.4",
+        "build_long": "15.00.1320.004",
+        "name": "Exchange Server 2013 CU17",
+        "release_date": "June 27, 2017",
+        "url": null
+    },
+    "15.0.1347.2": {
+        "build": "15.0.1347.2",
+        "build_long": "15.00.1347.002",
+        "name": "Exchange Server 2013 CU18",
+        "release_date": "September 19, 2017",
+        "url": null
+    },
+    "15.0.1365.1": {
+        "build": "15.0.1365.1",
+        "build_long": "15.00.1365.001",
+        "name": "Exchange Server 2013 CU19",
+        "release_date": "December 19, 2017",
+        "url": null
+    },
+    "15.0.1367.3": {
+        "build": "15.0.1367.3",
+        "build_long": "15.00.1367.003",
+        "name": "Exchange Server 2013 CU20",
+        "release_date": "March 20, 2018",
+        "url": null
+    },
+    "15.0.1395.12": {
+        "build": "15.0.1395.12",
+        "build_long": "15.00.1395.012",
+        "name": "Exchange Server 2013 CU21 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.0.1395.4": {
+        "build": "15.0.1395.4",
+        "build_long": "15.00.1395.004",
+        "name": "Exchange Server 2013 CU21",
+        "release_date": "June 19, 2018",
+        "url": null
+    },
+    "15.0.1473.3": {
+        "build": "15.0.1473.3",
+        "build_long": "15.00.1473.003",
+        "name": "Exchange Server 2013 CU22",
+        "release_date": "February 12, 2019",
+        "url": "https://www.microsoft.com/download/details.aspx?id=57826"
+    },
+    "15.0.1473.6": {
+        "build": "15.0.1473.6",
+        "build_long": "15.00.1473.006",
+        "name": "Exchange Server 2013 CU22 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.0.1497.12": {
+        "build": "15.0.1497.12",
+        "build_long": "15.00.1497.012",
+        "name": "Exchange Server 2013 CU23 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.0.1497.15": {
+        "build": "15.0.1497.15",
+        "build_long": "15.00.1497.015",
+        "name": "Exchange Server 2013 CU23 Apr21SU",
+        "release_date": "April 13, 2021",
+        "url": "https://support.microsoft.com/help/5001779"
+    },
+    "15.0.1497.18": {
+        "build": "15.0.1497.18",
+        "build_long": "15.00.1497.018",
+        "name": "Exchange Server 2013 CU23 May21SU",
+        "release_date": "May 11, 2021",
+        "url": "https://support.microsoft.com/help/5003435"
+    },
+    "15.0.1497.2": {
+        "build": "15.0.1497.2",
+        "build_long": "15.00.1497.002",
+        "name": "Exchange Server 2013 CU23",
+        "release_date": "June 18, 2019",
+        "url": "https://www.microsoft.com/download/details.aspx?id=58392"
+    },
+    "15.0.1497.23": {
+        "build": "15.0.1497.23",
+        "build_long": "15.00.1497.023",
+        "name": "Exchange Server 2013 CU23 Jul21SU",
+        "release_date": "July 13, 2021",
+        "url": "https://support.microsoft.com/help/5004778"
+    },
+    "15.0.1497.24": {
+        "build": "15.0.1497.24",
+        "build_long": "15.00.1497.024",
+        "name": "Exchange Server 2013 CU23 Oct21SU",
+        "release_date": "October 12, 2021",
+        "url": "https://support.microsoft.com/help/5007011"
+    },
+    "15.0.1497.26": {
+        "build": "15.0.1497.26",
+        "build_long": "15.00.1497.026",
+        "name": "Exchange Server 2013 CU23 Nov21SU",
+        "release_date": "November 9, 2021",
+        "url": "https://support.microsoft.com/help/5007409"
+    },
+    "15.0.1497.28": {
+        "build": "15.0.1497.28",
+        "build_long": "15.00.1497.028",
+        "name": "Exchange Server 2013 CU23 Jan22SU",
+        "release_date": "January 11, 2022",
+        "url": "https://support.microsoft.com/help/5008631"
+    },
+    "15.0.1497.33": {
+        "build": "15.0.1497.33",
+        "build_long": "15.00.1497.033",
+        "name": "Exchange Server 2013 CU23 Mar22SU",
+        "release_date": "March 8, 2022",
+        "url": "https://support.microsoft.com/help/5010324"
+    },
+    "15.0.516.32": {
+        "build": "15.0.516.32",
+        "build_long": "15.00.0516.032",
+        "name": "Exchange Server 2013 RTM",
+        "release_date": "December 3, 2012",
+        "url": null
+    },
+    "15.0.620.29": {
+        "build": "15.0.620.29",
+        "build_long": "15.00.0620.029",
+        "name": "Exchange Server 2013 CU1",
+        "release_date": "April 2, 2013",
+        "url": null
+    },
+    "15.0.712.24": {
+        "build": "15.0.712.24",
+        "build_long": "15.00.0712.024",
+        "name": "Exchange Server 2013 CU2",
+        "release_date": "July 9, 2013",
+        "url": null
+    },
+    "15.0.775.38": {
+        "build": "15.0.775.38",
+        "build_long": "15.00.0775.038",
+        "name": "Exchange Server 2013 CU3",
+        "release_date": "November 25, 2013",
+        "url": null
+    },
+    "15.0.847.32": {
+        "build": "15.0.847.32",
+        "build_long": "15.00.0847.032",
+        "name": "Exchange Server 2013 SP1",
+        "release_date": "February 25, 2014",
+        "url": null
+    },
+    "15.0.847.64": {
+        "build": "15.0.847.64",
+        "build_long": "15.00.0847.064",
+        "name": "Exchange Server 2013 SP1 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.0.913.22": {
+        "build": "15.0.913.22",
+        "build_long": "15.00.0913.022",
+        "name": "Exchange Server 2013 CU5",
+        "release_date": "May 27, 2014",
+        "url": null
+    },
+    "15.0.995.29": {
+        "build": "15.0.995.29",
+        "build_long": "15.00.0995.029",
+        "name": "Exchange Server 2013 CU6",
+        "release_date": "August 26, 2014",
+        "url": null
+    },
+    "15.1.1034.26": {
+        "build": "15.1.1034.26",
+        "build_long": "15.01.1034.026",
+        "name": "Exchange Server 2016 CU6",
+        "release_date": "June 27, 2017",
+        "url": null
+    },
+    "15.1.1261.35": {
+        "build": "15.1.1261.35",
+        "build_long": "15.01.1261.035",
+        "name": "Exchange Server 2016 CU7",
+        "release_date": "September 19, 2017",
+        "url": null
+    },
+    "15.1.1415.10": {
+        "build": "15.1.1415.10",
+        "build_long": "15.01.1415.010",
+        "name": "Exchange Server 2016 CU8 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1415.2": {
+        "build": "15.1.1415.2",
+        "build_long": "15.01.1415.002",
+        "name": "Exchange Server 2016 CU8",
+        "release_date": "December 19, 2017",
+        "url": null
+    },
+    "15.1.1466.16": {
+        "build": "15.1.1466.16",
+        "build_long": "15.01.1466.016",
+        "name": "Exchange Server 2016 CU9 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1466.3": {
+        "build": "15.1.1466.3",
+        "build_long": "15.01.1466.003",
+        "name": "Exchange Server 2016 CU9",
+        "release_date": "March 20, 2018",
+        "url": null
+    },
+    "15.1.1531.12": {
+        "build": "15.1.1531.12",
+        "build_long": "15.01.1531.012",
+        "name": "Exchange Server 2016 CU10 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1531.3": {
+        "build": "15.1.1531.3",
+        "build_long": "15.01.1531.003",
+        "name": "Exchange Server 2016 CU10",
+        "release_date": "June 19, 2018",
+        "url": null
+    },
+    "15.1.1591.10": {
+        "build": "15.1.1591.10",
+        "build_long": "15.01.1591.010",
+        "name": "Exchange Server 2016 CU11",
+        "release_date": "October 16, 2018",
+        "url": null
+    },
+    "15.1.1591.18": {
+        "build": "15.1.1591.18",
+        "build_long": "15.01.1591.018",
+        "name": "Exchange Server 2016 CU11 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1713.10": {
+        "build": "15.1.1713.10",
+        "build_long": "15.01.1713.010",
+        "name": "Exchange Server 2016 CU12 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1713.5": {
+        "build": "15.1.1713.5",
+        "build_long": "15.01.1713.005",
+        "name": "Exchange Server 2016 CU12",
+        "release_date": "February 12, 2019",
+        "url": null
+    },
+    "15.1.1779.2": {
+        "build": "15.1.1779.2",
+        "build_long": "15.01.1779.002",
+        "name": "Exchange Server 2016 CU13",
+        "release_date": "June 18, 2019",
+        "url": null
+    },
+    "15.1.1779.8": {
+        "build": "15.1.1779.8",
+        "build_long": "15.01.1779.008",
+        "name": "Exchange Server 2016 CU13 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1847.12": {
+        "build": "15.1.1847.12",
+        "build_long": "15.01.1847.012",
+        "name": "Exchange Server 2016 CU14 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1847.3": {
+        "build": "15.1.1847.3",
+        "build_long": "15.01.1847.003",
+        "name": "Exchange Server 2016 CU14",
+        "release_date": "September 17, 2019",
+        "url": null
+    },
+    "15.1.1913.12": {
+        "build": "15.1.1913.12",
+        "build_long": "15.01.1913.012",
+        "name": "Exchange Server 2016 CU15 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.1913.5": {
+        "build": "15.1.1913.5",
+        "build_long": "15.01.1913.005",
+        "name": "Exchange Server 2016 CU15",
+        "release_date": "December 17, 2019",
+        "url": null
+    },
+    "15.1.1979.3": {
+        "build": "15.1.1979.3",
+        "build_long": "15.01.1979.003",
+        "name": "Exchange Server 2016 CU16",
+        "release_date": "March 17, 2020",
+        "url": null
+    },
+    "15.1.1979.8": {
+        "build": "15.1.1979.8",
+        "build_long": "15.01.1979.008",
+        "name": "Exchange Server 2016 CU16 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.2044.13": {
+        "build": "15.1.2044.13",
+        "build_long": "15.01.2044.013",
+        "name": "Exchange Server 2016 CU17 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.2044.4": {
+        "build": "15.1.2044.4",
+        "build_long": "15.01.2044.004",
+        "name": "Exchange Server 2016 CU17",
+        "release_date": "June 16, 2020",
+        "url": null
+    },
+    "15.1.2106.13": {
+        "build": "15.1.2106.13",
+        "build_long": "15.01.2106.013",
+        "name": "Exchange Server 2016 CU18 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.2106.2": {
+        "build": "15.1.2106.2",
+        "build_long": "15.01.2106.002",
+        "name": "Exchange Server 2016 CU18",
+        "release_date": "September 15, 2020",
+        "url": null
+    },
+    "15.1.2176.12": {
+        "build": "15.1.2176.12",
+        "build_long": "15.01.2176.012",
+        "name": "Exchange Server 2016 CU19 Apr21SU",
+        "release_date": "April 13, 2021",
+        "url": "https://support.microsoft.com/help/5001779"
+    },
+    "15.1.2176.14": {
+        "build": "15.1.2176.14",
+        "build_long": "15.01.2176.014",
+        "name": "Exchange Server 2016 CU19 May21SU",
+        "release_date": "May 11, 2021",
+        "url": "https://support.microsoft.com/help/5003435"
+    },
+    "15.1.2176.2": {
+        "build": "15.1.2176.2",
+        "build_long": "15.01.2176.002",
+        "name": "Exchange Server 2016 CU19",
+        "release_date": "December 15, 2020",
+        "url": null
+    },
+    "15.1.2176.9": {
+        "build": "15.1.2176.9",
+        "build_long": "15.01.2176.009",
+        "name": "Exchange Server 2016 CU19 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.1.2242.10": {
+        "build": "15.1.2242.10",
+        "build_long": "15.01.2242.010",
+        "name": "Exchange Server 2016 CU20 May21SU",
+        "release_date": "May 11, 2021",
+        "url": "https://support.microsoft.com/help/5003435"
+    },
+    "15.1.2242.12": {
+        "build": "15.1.2242.12",
+        "build_long": "15.01.2242.012",
+        "name": "Exchange Server 2016 CU20 Jul21SU",
+        "release_date": "July 13, 2021",
+        "url": "https://support.microsoft.com/help/5004779"
+    },
+    "15.1.2242.4": {
+        "build": "15.1.2242.4",
+        "build_long": "15.01.2242.004",
+        "name": "Exchange Server 2016 CU20",
+        "release_date": "March 16, 2021",
+        "url": null
+    },
+    "15.1.2242.8": {
+        "build": "15.1.2242.8",
+        "build_long": "15.01.2242.008",
+        "name": "Exchange Server 2016 CU20 Apr21SU",
+        "release_date": "April 13, 2021",
+        "url": "https://support.microsoft.com/help/5001779"
+    },
+    "15.1.225.16": {
+        "build": "15.1.225.16",
+        "build_long": "15.01.0225.016",
+        "name": "Exchange Server 2016 Preview",
+        "release_date": "July 22, 2015",
+        "url": null
+    },
+    "15.1.225.42": {
+        "build": "15.1.225.42",
+        "build_long": "15.01.0225.042",
+        "name": "Exchange Server 2016 RTM",
+        "release_date": "October 1, 2015",
+        "url": null
+    },
+    "15.1.2308.14": {
+        "build": "15.1.2308.14",
+        "build_long": "15.01.2308.014",
+        "name": "Exchange Server 2016 CU21 Jul21SU",
+        "release_date": "July 13, 2021",
+        "url": "https://support.microsoft.com/help/5004779"
+    },
+    "15.1.2308.15": {
+        "build": "15.1.2308.15",
+        "build_long": "15.01.2308.015",
+        "name": "Exchange Server 2016 CU21 Oct21SU",
+        "release_date": "October 12, 2021",
+        "url": "https://support.microsoft.com/help/5007012"
+    },
+    "15.1.2308.20": {
+        "build": "15.1.2308.20",
+        "build_long": "15.01.2308.020",
+        "name": "Exchange Server 2016 CU21 Nov21SU",
+        "release_date": "November 9, 2021",
+        "url": "https://support.microsoft.com/help/5007409"
+    },
+    "15.1.2308.21": {
+        "build": "15.1.2308.21",
+        "build_long": "15.01.2308.021",
+        "name": "Exchange Server 2016 CU21 Jan22SU",
+        "release_date": "January 11, 2022",
+        "url": "https://support.microsoft.com/help/5008631"
+    },
+    "15.1.2308.27": {
+        "build": "15.1.2308.27",
+        "build_long": "15.01.2308.027",
+        "name": "Exchange Server 2016 CU21 Mar22SU",
+        "release_date": "March 8, 2022",
+        "url": "https://support.microsoft.com/help/5012698"
+    },
+    "15.1.2308.8": {
+        "build": "15.1.2308.8",
+        "build_long": "15.01.2308.008",
+        "name": "Exchange Server 2016 CU21",
+        "release_date": "June 29, 2021",
+        "url": "https://www.microsoft.com/download/details.aspx?familyID=88e4107e-a9a6-4847-959d-98e6e5d46f4a"
+    },
+    "15.1.2375.12": {
+        "build": "15.1.2375.12",
+        "build_long": "15.01.2375.012",
+        "name": "Exchange Server 2016 CU22 Oct21SU",
+        "release_date": "October 12, 2021",
+        "url": "https://support.microsoft.com/help/5007012"
+    },
+    "15.1.2375.17": {
+        "build": "15.1.2375.17",
+        "build_long": "15.01.2375.017",
+        "name": "Exchange Server 2016 CU22 Nov21SU",
+        "release_date": "November 9, 2021",
+        "url": "https://support.microsoft.com/help/5007409"
+    },
+    "15.1.2375.18": {
+        "build": "15.1.2375.18",
+        "build_long": "15.01.2375.018",
+        "name": "Exchange Server 2016 CU22 Jan22SU",
+        "release_date": "January 11, 2022",
+        "url": "https://support.microsoft.com/help/5008631"
+    },
+    "15.1.2375.24": {
+        "build": "15.1.2375.24",
+        "build_long": "15.01.2375.024",
+        "name": "Exchange Server 2016 CU22 Mar22SU",
+        "release_date": "March 8, 2022",
+        "url": "https://support.microsoft.com/help/5012698"
+    },
+    "15.1.2375.7": {
+        "build": "15.1.2375.7",
+        "build_long": "15.01.2375.007",
+        "name": "Exchange Server 2016 CU22",
+        "release_date": "September 28, 2021",
+        "url": "https://www.microsoft.com/download/details.aspx?familyID=a7d608a2-d81b-46af-8753-8c3c2ea1f783"
+    },
+    "15.1.396.30": {
+        "build": "15.1.396.30",
+        "build_long": "15.01.0396.030",
+        "name": "Exchange Server 2016 CU1",
+        "release_date": "March 15, 2016",
+        "url": null
+    },
+    "15.1.466.34": {
+        "build": "15.1.466.34",
+        "build_long": "15.01.0466.034",
+        "name": "Exchange Server 2016 CU2",
+        "release_date": "June 21, 2016",
+        "url": null
+    },
+    "15.1.544.27": {
+        "build": "15.1.544.27",
+        "build_long": "15.01.0544.027",
+        "name": "Exchange Server 2016 CU3",
+        "release_date": "September 20, 2016",
+        "url": null
+    },
+    "15.1.669.32": {
+        "build": "15.1.669.32",
+        "build_long": "15.01.0669.032",
+        "name": "Exchange Server 2016 CU4",
+        "release_date": "December 13, 2016",
+        "url": null
+    },
+    "15.1.845.34": {
+        "build": "15.1.845.34",
+        "build_long": "15.01.0845.034",
+        "name": "Exchange Server 2016 CU5",
+        "release_date": "March 21, 2017",
+        "url": null
+    },
+    "15.2.196.0": {
+        "build": "15.2.196.0",
+        "build_long": "15.02.0196.000",
+        "name": "Exchange Server 2019 Preview",
+        "release_date": "July 24, 2018",
+        "url": null
+    },
+    "15.2.221.12": {
+        "build": "15.2.221.12",
+        "build_long": "15.02.0221.012",
+        "name": "Exchange Server 2019 RTM",
+        "release_date": "October 22, 2018",
+        "url": null
+    },
+    "15.2.221.18": {
+        "build": "15.2.221.18",
+        "build_long": "15.02.0221.018",
+        "name": "Exchange Server 2019 RTM Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.330.11": {
+        "build": "15.2.330.11",
+        "build_long": "15.02.0330.011",
+        "name": "Exchange Server 2019 CU1 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.330.5": {
+        "build": "15.2.330.5",
+        "build_long": "15.02.0330.005",
+        "name": "Exchange Server 2019 CU1",
+        "release_date": "February 12, 2019",
+        "url": null
+    },
+    "15.2.397.11": {
+        "build": "15.2.397.11",
+        "build_long": "15.02.0397.011",
+        "name": "Exchange Server 2019 CU2 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.397.3": {
+        "build": "15.2.397.3",
+        "build_long": "15.02.0397.003",
+        "name": "Exchange Server 2019 CU2",
+        "release_date": "June 18, 2019",
+        "url": null
+    },
+    "15.2.464.15": {
+        "build": "15.2.464.15",
+        "build_long": "15.02.0464.015",
+        "name": "Exchange Server 2019 CU3 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.464.5": {
+        "build": "15.2.464.5",
+        "build_long": "15.02.0464.005",
+        "name": "Exchange Server 2019 CU3",
+        "release_date": "September 17, 2019",
+        "url": null
+    },
+    "15.2.529.13": {
+        "build": "15.2.529.13",
+        "build_long": "15.02.0529.013",
+        "name": "Exchange Server 2019 CU4 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.529.5": {
+        "build": "15.2.529.5",
+        "build_long": "15.02.0529.005",
+        "name": "Exchange Server 2019 CU4",
+        "release_date": "December 17, 2019",
+        "url": null
+    },
+    "15.2.595.3": {
+        "build": "15.2.595.3",
+        "build_long": "15.02.0595.003",
+        "name": "Exchange Server 2019 CU5",
+        "release_date": "March 17, 2020",
+        "url": null
+    },
+    "15.2.595.8": {
+        "build": "15.2.595.8",
+        "build_long": "15.02.0595.008",
+        "name": "Exchange Server 2019 CU5 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.659.12": {
+        "build": "15.2.659.12",
+        "build_long": "15.02.0659.012",
+        "name": "Exchange Server 2019 CU6 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.659.4": {
+        "build": "15.2.659.4",
+        "build_long": "15.02.0659.004",
+        "name": "Exchange Server 2019 CU6",
+        "release_date": "June 16, 2020",
+        "url": null
+    },
+    "15.2.721.13": {
+        "build": "15.2.721.13",
+        "build_long": "15.02.0721.013",
+        "name": "Exchange Server 2019 CU7 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.721.2": {
+        "build": "15.2.721.2",
+        "build_long": "15.02.0721.002",
+        "name": "Exchange Server 2019 CU7",
+        "release_date": "September 15, 2020",
+        "url": null
+    },
+    "15.2.792.10": {
+        "build": "15.2.792.10",
+        "build_long": "15.02.0792.010",
+        "name": "Exchange Server 2019 CU8 Mar21SU",
+        "release_date": "March 2, 2021",
+        "url": "https://support.microsoft.com/help/5000871"
+    },
+    "15.2.792.13": {
+        "build": "15.2.792.13",
+        "build_long": "15.02.0792.013",
+        "name": "Exchange Server 2019 CU8 Apr21SU",
+        "release_date": "April 13, 2021",
+        "url": "https://support.microsoft.com/help/5001779"
+    },
+    "15.2.792.15": {
+        "build": "15.2.792.15",
+        "build_long": "15.02.0792.015",
+        "name": "Exchange Server 2019 CU8 May21SU",
+        "release_date": "May 11, 2021",
+        "url": "https://support.microsoft.com/help/5003435"
+    },
+    "15.2.792.3": {
+        "build": "15.2.792.3",
+        "build_long": "15.02.0792.003",
+        "name": "Exchange Server 2019 CU8",
+        "release_date": "December 15, 2020",
+        "url": null
+    },
+    "15.2.858.10": {
+        "build": "15.2.858.10",
+        "build_long": "15.02.0858.010",
+        "name": "Exchange Server 2019 CU9 Apr21SU",
+        "release_date": "April 13, 2021",
+        "url": "https://support.microsoft.com/help/5001779"
+    },
+    "15.2.858.12": {
+        "build": "15.2.858.12",
+        "build_long": "15.02.0858.012",
+        "name": "Exchange Server 2019 CU9 May21SU",
+        "release_date": "May 11, 2021",
+        "url": "https://support.microsoft.com/help/5003435"
+    },
+    "15.2.858.15": {
+        "build": "15.2.858.15",
+        "build_long": "15.02.0858.015",
+        "name": "Exchange Server 2019 CU9 Jul21SU",
+        "release_date": "July 13, 2021",
+        "url": "https://support.microsoft.com/help/5004780"
+    },
+    "15.2.858.5": {
+        "build": "15.2.858.5",
+        "build_long": "15.02.0858.005",
+        "name": "Exchange Server 2019 CU9",
+        "release_date": "March 16, 2021",
+        "url": null
+    },
+    "15.2.922.13": {
+        "build": "15.2.922.13",
+        "build_long": "15.02.0922.013",
+        "name": "Exchange Server 2019 CU10 Jul21SU",
+        "release_date": "July 13, 2021",
+        "url": "https://support.microsoft.com/help/5004780"
+    },
+    "15.2.922.14": {
+        "build": "15.2.922.14",
+        "build_long": "15.02.0922.014",
+        "name": "Exchange Server 2019 CU10 Oct21SU",
+        "release_date": "October 12, 2021",
+        "url": "https://support.microsoft.com/help/5007012"
+    },
+    "15.2.922.19": {
+        "build": "15.2.922.19",
+        "build_long": "15.02.0922.019",
+        "name": "Exchange Server 2019 CU10 Nov21SU",
+        "release_date": "November 9, 2021",
+        "url": "https://support.microsoft.com/help/5007409"
+    },
+    "15.2.922.20": {
+        "build": "15.2.922.20",
+        "build_long": "15.02.0922.020",
+        "name": "Exchange Server 2019 CU10 Jan22SU",
+        "release_date": "January 11, 2022",
+        "url": "https://support.microsoft.com/help/5008631"
+    },
+    "15.2.922.27": {
+        "build": "15.2.922.27",
+        "build_long": "15.02.0922.027",
+        "name": "Exchange Server 2019 CU10 Mar22SU",
+        "release_date": "March 8, 2022",
+        "url": "https://support.microsoft.com/help/5012698"
+    },
+    "15.2.922.7": {
+        "build": "15.2.922.7",
+        "build_long": "15.02.0922.007",
+        "name": "Exchange Server 2019 CU10",
+        "release_date": "June 29, 2021",
+        "url": "https://www.microsoft.com/download/details.aspx?familyID=aa0d4c7c-526f-4a1a-924c-b534839f0001"
+    },
+    "15.2.986.14": {
+        "build": "15.2.986.14",
+        "build_long": "15.02.0986.014",
+        "name": "Exchange Server 2019 CU11 Nov21SU",
+        "release_date": "November 9, 2021",
+        "url": "https://support.microsoft.com/help/5007409"
+    },
+    "15.2.986.15": {
+        "build": "15.2.986.15",
+        "build_long": "15.02.0986.015",
+        "name": "Exchange Server 2019 CU11 Jan22SU",
+        "release_date": "January 11, 2022",
+        "url": "https://support.microsoft.com/help/5008631"
+    },
+    "15.2.986.22": {
+        "build": "15.2.986.22",
+        "build_long": "15.02.0986.022",
+        "name": "Exchange Server 2019 CU11 Mar22SU",
+        "release_date": "March 8, 2022",
+        "url": "https://support.microsoft.com/help/5012698"
+    },
+    "15.2.986.5": {
+        "build": "15.2.986.5",
+        "build_long": "15.02.0986.005",
+        "name": "Exchange Server 2019 CU11",
+        "release_date": "September 28, 2021",
+        "url": "https://www.microsoft.com/download/details.aspx?familyID=40be4769-0188-4b1a-a023-1a3ecb919870"
+    },
+    "15.2.986.9": {
+        "build": "15.2.986.9",
+        "build_long": "15.02.0986.009",
+        "name": "Exchange Server 2019 CU11 Oct21SU",
+        "release_date": "October 12, 2021",
+        "url": "https://support.microsoft.com/help/5007012"
+    },
+    "8.0.685.25": {
+        "build": "8.0.685.25",
+        "build_long": "8.00.0685.025",
+        "name": "Exchange Server 2007 RTM",
+        "release_date": "March 8, 2007",
+        "url": null
+    },
+    "8.0.708.3": {
+        "build": "8.0.708.3",
+        "build_long": "8.00.0708.003",
+        "name": "Update Rollup 1 for Exchange Server 2007",
+        "release_date": "April 17, 2007",
+        "url": null
+    },
+    "8.0.711.2": {
+        "build": "8.0.711.2",
+        "build_long": "8.00.0711.002",
+        "name": "Update Rollup 2 for Exchange Server 2007",
+        "release_date": "May 8, 2007",
+        "url": null
+    },
+    "8.0.730.1": {
+        "build": "8.0.730.1",
+        "build_long": "8.00.0730.001",
+        "name": "Update Rollup 3 for Exchange Server 2007",
+        "release_date": "June 28, 2007",
+        "url": null
+    },
+    "8.0.744.0": {
+        "build": "8.0.744.0",
+        "build_long": "8.00.0744.000",
+        "name": "Update Rollup 4 for Exchange Server 2007",
+        "release_date": "August 23, 2007",
+        "url": null
+    },
+    "8.0.754.0": {
+        "build": "8.0.754.0",
+        "build_long": "8.00.0754.000",
+        "name": "Update Rollup 5 for Exchange Server 2007",
+        "release_date": "October 25, 2007",
+        "url": null
+    },
+    "8.0.783.2": {
+        "build": "8.0.783.2",
+        "build_long": "8.00.0783.002",
+        "name": "Update Rollup 6 for Exchange Server 2007",
+        "release_date": "February 21, 2008",
+        "url": null
+    },
+    "8.0.813.0": {
+        "build": "8.0.813.0",
+        "build_long": "8.00.0813.000",
+        "name": "Update Rollup 7 for Exchange Server 2007",
+        "release_date": "July 8, 2008",
+        "url": null
+    },
+    "8.1.240.6": {
+        "build": "8.1.240.6",
+        "build_long": "8.01.0240.006",
+        "name": "Exchange Server 2007 SP1",
+        "release_date": "November 29, 2007",
+        "url": null
+    },
+    "8.1.263.1": {
+        "build": "8.1.263.1",
+        "build_long": "8.01.0263.001",
+        "name": "Update Rollup 1 for Exchange Server 2007 SP1",
+        "release_date": "February 28, 2008",
+        "url": null
+    },
+    "8.1.278.2": {
+        "build": "8.1.278.2",
+        "build_long": "8.01.0278.002",
+        "name": "Update Rollup 2 for Exchange Server 2007 SP1",
+        "release_date": "May 9, 2008",
+        "url": null
+    },
+    "8.1.291.2": {
+        "build": "8.1.291.2",
+        "build_long": "8.01.0291.002",
+        "name": "Update Rollup 3 for Exchange Server 2007 SP1",
+        "release_date": "July 8, 2008",
+        "url": null
+    },
+    "8.1.311.3": {
+        "build": "8.1.311.3",
+        "build_long": "8.01.0311.003",
+        "name": "Update Rollup 4 for Exchange Server 2007 SP1",
+        "release_date": "October 7, 2008",
+        "url": null
+    },
+    "8.1.336.1": {
+        "build": "8.1.336.1",
+        "build_long": "8.01.0336.01",
+        "name": "Update Rollup 5 for Exchange Server 2007 SP1",
+        "release_date": "November 20, 2008",
+        "url": null
+    },
+    "8.1.340.1": {
+        "build": "8.1.340.1",
+        "build_long": "8.01.0340.001",
+        "name": "Update Rollup 6 for Exchange Server 2007 SP1",
+        "release_date": "February 10, 2009",
+        "url": null
+    },
+    "8.1.359.2": {
+        "build": "8.1.359.2",
+        "build_long": "8.01.0359.002",
+        "name": "Update Rollup 7 for Exchange Server 2007 SP1",
+        "release_date": "March 18, 2009",
+        "url": null
+    },
+    "8.1.375.2": {
+        "build": "8.1.375.2",
+        "build_long": "8.01.0375.002",
+        "name": "Update Rollup 8 for Exchange Server 2007 SP1",
+        "release_date": "May 19, 2009",
+        "url": null
+    },
+    "8.1.393.1": {
+        "build": "8.1.393.1",
+        "build_long": "8.01.0393.001",
+        "name": "Update Rollup 9 for Exchange Server 2007 SP1",
+        "release_date": "July 16, 2009",
+        "url": null
+    },
+    "8.1.436.0": {
+        "build": "8.1.436.0",
+        "build_long": "8.01.0436.000",
+        "name": "Update Rollup 10 for Exchange Server 2007 SP1",
+        "release_date": "April 13, 2010",
+        "url": null
+    },
+    "8.2.176.2": {
+        "build": "8.2.176.2",
+        "build_long": "8.02.0176.002",
+        "name": "Exchange Server 2007 SP2",
+        "release_date": "August 24, 2009",
+        "url": null
+    },
+    "8.2.217.3": {
+        "build": "8.2.217.3",
+        "build_long": "8.02.0217.003",
+        "name": "Update Rollup 1 for Exchange Server 2007 SP2",
+        "release_date": "November 19, 2009",
+        "url": null
+    },
+    "8.2.234.1": {
+        "build": "8.2.234.1",
+        "build_long": "8.02.0234.001",
+        "name": "Update Rollup 2 for Exchange Server 2007 SP2",
+        "release_date": "January 22, 2010",
+        "url": null
+    },
+    "8.2.247.2": {
+        "build": "8.2.247.2",
+        "build_long": "8.02.0247.002",
+        "name": "Update Rollup 3 for Exchange Server 2007 SP2",
+        "release_date": "March 17, 2010",
+        "url": null
+    },
+    "8.2.254.0": {
+        "build": "8.2.254.0",
+        "build_long": "8.02.0254.000",
+        "name": "Update Rollup 4 for Exchange Server 2007 SP2",
+        "release_date": "April 9, 2010",
+        "url": null
+    },
+    "8.2.305.3": {
+        "build": "8.2.305.3",
+        "build_long": "8.02.0305.003",
+        "name": "Update Rollup 5 for Exchange Server 2007 SP2",
+        "release_date": "December 7, 2010",
+        "url": null
+    },
+    "8.3.106.2": {
+        "build": "8.3.106.2",
+        "build_long": "8.03.0106.002",
+        "name": "Update Rollup 1 for Exchange Server 2007 SP3",
+        "release_date": "September 9, 2010",
+        "url": null
+    },
+    "8.3.137.3": {
+        "build": "8.3.137.3",
+        "build_long": "8.03.0137.003",
+        "name": "Update Rollup 2 for Exchange Server 2007 SP3",
+        "release_date": "December 10, 2010",
+        "url": null
+    },
+    "8.3.159.2": {
+        "build": "8.3.159.2",
+        "build_long": "8.03.0159.002",
+        "name": "Update Rollup 3-v2 for Exchange Server 2007 SP3",
+        "release_date": "March 30, 2011",
+        "url": null
+    },
+    "8.3.192.1": {
+        "build": "8.3.192.1",
+        "build_long": "8.03.0192.001",
+        "name": "Update Rollup 4 for Exchange Server 2007 SP3",
+        "release_date": "May 28, 2011",
+        "url": null
+    },
+    "8.3.213.1": {
+        "build": "8.3.213.1",
+        "build_long": "8.03.0213.001",
+        "name": "Update Rollup 5 for Exchange Server 2007 SP3",
+        "release_date": "September 21, 2011",
+        "url": null
+    },
+    "8.3.245.2": {
+        "build": "8.3.245.2",
+        "build_long": "8.03.0245.002",
+        "name": "Update Rollup 6 for Exchange Server 2007 SP3",
+        "release_date": "January 26, 2012",
+        "url": null
+    },
+    "8.3.264.0": {
+        "build": "8.3.264.0",
+        "build_long": "8.03.0264.000",
+        "name": "Update Rollup 7 for Exchange Server 2007 SP3",
+        "release_date": "April 16, 2012",
+        "url": null
+    },
+    "8.3.279.3": {
+        "build": "8.3.279.3",
+        "build_long": "8.03.0279.003",
+        "name": "Update Rollup 8 for Exchange Server 2007 SP3",
+        "release_date": "August 13, 2012",
+        "url": null
+    },
+    "8.3.279.5": {
+        "build": "8.3.279.5",
+        "build_long": "8.03.0279.005",
+        "name": "Update Rollup 8-v2 for Exchange Server 2007 SP3",
+        "release_date": "October 9, 2012",
+        "url": null
+    },
+    "8.3.279.6": {
+        "build": "8.3.279.6",
+        "build_long": "8.03.0279.006",
+        "name": "Update Rollup 8-v3 for Exchange Server 2007 SP3",
+        "release_date": "November 13, 2012",
+        "url": null
+    },
+    "8.3.297.2": {
+        "build": "8.3.297.2",
+        "build_long": "8.03.0297.002",
+        "name": "Update Rollup 9 for Exchange Server 2007 SP3",
+        "release_date": "December 10, 2012",
+        "url": null
+    },
+    "8.3.298.3": {
+        "build": "8.3.298.3",
+        "build_long": "8.03.0298.003",
+        "name": "Update Rollup 10 for Exchange Server 2007 SP3",
+        "release_date": "February 11, 2013",
+        "url": null
+    },
+    "8.3.327.1": {
+        "build": "8.3.327.1",
+        "build_long": "8.03.0327.001",
+        "name": "Update Rollup 11 for Exchange Server 2007 SP3",
+        "release_date": "August 13, 2013",
+        "url": null
+    },
+    "8.3.342.4": {
+        "build": "8.3.342.4",
+        "build_long": "8.03.0342.004",
+        "name": "Update Rollup 12 for Exchange Server 2007 SP3",
+        "release_date": "December 9, 2013",
+        "url": null
+    },
+    "8.3.348.2": {
+        "build": "8.3.348.2",
+        "build_long": "8.03.0348.002",
+        "name": "Update Rollup 13 for Exchange Server 2007 SP3",
+        "release_date": "February 24, 2014",
+        "url": null
+    },
+    "8.3.379.2": {
+        "build": "8.3.379.2",
+        "build_long": "8.03.0379.002",
+        "name": "Update Rollup 14 for Exchange Server 2007 SP3",
+        "release_date": "August 26, 2014",
+        "url": null
+    },
+    "8.3.389.2": {
+        "build": "8.3.389.2",
+        "build_long": "8.03.0389.002",
+        "name": "Update Rollup 15 for Exchange Server 2007 SP3",
+        "release_date": "December 9, 2014",
+        "url": null
+    },
+    "8.3.406.0": {
+        "build": "8.3.406.0",
+        "build_long": "8.03.0406.000",
+        "name": "Update Rollup 16 for Exchange Server 2007 SP3",
+        "release_date": "March 17, 2015",
+        "url": null
+    },
+    "8.3.417.1": {
+        "build": "8.3.417.1",
+        "build_long": "8.03.0417.001",
+        "name": "Update Rollup 17 forExchange Server 2007 SP3",
+        "release_date": "June 17, 2015",
+        "url": null
+    },
+    "8.3.445.0": {
+        "build": "8.3.445.0",
+        "build_long": "8.03.0445.000",
+        "name": "Update Rollup 18 forExchange Server 2007 SP3",
+        "release_date": "December, 2015",
+        "url": null
+    },
+    "8.3.459.0": {
+        "build": "8.3.459.0",
+        "build_long": "8.03.0459.000",
+        "name": "Update Rollup 19 forExchange Server 2007 SP3",
+        "release_date": "March 15, 2016",
+        "url": null
+    },
+    "8.3.468.0": {
+        "build": "8.3.468.0",
+        "build_long": "8.03.0468.000",
+        "name": "Update Rollup 20 for Exchange Server 2007 SP3",
+        "release_date": "June 21, 2016",
+        "url": null
+    },
+    "8.3.485.1": {
+        "build": "8.3.485.1",
+        "build_long": "8.03.0485.001",
+        "name": "Update Rollup 21 for Exchange Server 2007 SP3",
+        "release_date": "September 20, 2016",
+        "url": null
+    },
+    "8.3.502.0": {
+        "build": "8.3.502.0",
+        "build_long": "8.03.0502.000",
+        "name": "Update Rollup 22 for Exchange Server 2007 SP3",
+        "release_date": "December 13, 2016",
+        "url": null
+    },
+    "8.3.517.0": {
+        "build": "8.3.517.0",
+        "build_long": "8.03.0517.000",
+        "name": "Update Rollup 23 for Exchange Server 2007 SP3",
+        "release_date": "March 21, 2017",
+        "url": null
+    },
+    "8.3.83.6": {
+        "build": "8.3.83.6",
+        "build_long": "8.03.0083.006",
+        "name": "Exchange Server 2007 SP3",
+        "release_date": "June 7, 2010",
+        "url": null
+    }
+}
