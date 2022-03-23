@@ -152,7 +152,10 @@ class owa_info():
         if build is not None:
             ecp_build = self.get_build_via_exporttool(url, build)
             if ecp_build is not None:
-                return self.versions[ecp_build]
+                try:
+                    return self.versions[ecp_build]
+                except:
+                    return {'build': build, 'name': self.buildnumber_to_version(build)} 
             else:
                 return {'build': build, 'name': self.buildnumber_to_version(build)} 
         return None
@@ -241,6 +244,8 @@ class owa_info():
     def get_common_name(self, cert):
         try:
             names = cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)
+            if len(names) == 0:
+                return None
             return names[0].value
         except x509.ExtensionNotFound:
             return None
@@ -283,6 +288,9 @@ class owa_info():
         return HostInfo(cert=crypto_cert, peername=peername, hostname=hostname)
 
     def print_basic_info(self, hostinfo):
+        common_name = self.get_common_name(hostinfo.cert)
+        if not common_name:
+            return
         s = '''\n[*] Certinfo:
 \tcommonName: {commonname}
 \tSAN: {SAN}
@@ -292,7 +300,7 @@ class owa_info():
 '''.format(
                 hostname=hostinfo.hostname,
                 peername=hostinfo.peername,
-                commonname=self.get_common_name(hostinfo.cert),
+                commonname=common_name,
                 SAN=self.get_alt_names(hostinfo.cert),
                 issuer=self.get_issuer(hostinfo.cert),
                 notbefore=hostinfo.cert.not_valid_before,
@@ -376,10 +384,13 @@ class owa_info():
                 results = self.plainHost()
             if len(results) > 0:
                 for ip in results:
-                    if ipaddress.ip_address(ip).is_private:
-                        print(f"[+] Internal ip:\n\t👉  {ip}")
+                    try:
+                        if ipaddress.ip_address(ip).is_private:
+                            print(f"[+] Internal ip:\n\t👉  {ip}")
+                    except:
+                        continue
             if self.ssl and self.host:
-                hostinfo = self.get_certificate(self.host, self.port)      
+                hostinfo = self.get_certificate(self.host, self.port)
                 self.print_basic_info(hostinfo)  
             
             
