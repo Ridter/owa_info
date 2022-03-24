@@ -30,7 +30,7 @@ class owa_info():
         self.host     = None
         self.port     = None
         self.paths    = ["Autodiscover/", "Autodiscover/Autodiscover.xml",
-                         "Microsoft-Server-ActiveSync", "Microsoft-Server-ActriveSync/default.eas",
+                         "Microsoft-Server-ActiveSync", "Microsoft-Server-ActiveSync/default.eas",
                          "ECP", "EWS", "EWS/Exchange.asmx","Exchange", "OWA"]
         self.versions = self.get_versions_map()
 
