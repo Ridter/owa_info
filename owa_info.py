@@ -9,7 +9,9 @@ import ssl
 import ipaddress
 import json
 import idna
+import sys
 import argparse
+import random
 from OpenSSL import SSL
 from cryptography import x509
 from urllib.parse import urlparse
@@ -34,6 +36,29 @@ class owa_info():
                          "ECP", "EWS", "EWS/Exchange.asmx","Exchange", "OWA"]
         self.versions = self.get_versions_map()
 
+
+    def get_random_ua(self):
+        first_num = random.randint(90, 100)
+        third_num = random.randint(0, 3200)
+        fourth_num = random.randint(0, 140)
+        os_type = [
+            '(Windows NT 6.1; WOW64)',
+            '(Windows NT 10.0; WOW64)',
+            '(X11; Linux x86_64)',
+            '(X11; Linux i686) ',
+            '(Macintosh;U; Intel Mac OS X 12_2_1;en-AU)',
+            '(iPhone; U; CPU iPhone OS 15_0_1 like Mac OS X; en-SG)',
+            '(Windows NT 10.0; Win64; x64; Xbox; Xbox One) ',
+            '(iPad; U; CPU OS 14_5_1 like Mac OS X; en-US) ',
+            '(Macintosh; Intel Mac OS X 12_0_1)'
+        ]
+        chrome_version = 'Chrome/{}.0.{}.{}'.format(
+            first_num, third_num, fourth_num)
+
+        random_ua = ' '.join(['Mozilla/5.0', random.choice(os_type), 'AppleWebKit/537.36',
+                    '(KHTML, like Gecko)', chrome_version, 'Safari/537.36']
+                  )
+        return random_ua
     
     def get_versions_map(self):
         # get versions dict
@@ -46,13 +71,18 @@ class owa_info():
     def req(self, url, data=None, headers=None):
         if not headers:
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
+                'User-Agent': self.get_random_ua(),
             }
-        if data:
-            resp = requests.post(url, data=data,timeout=self.timeout, verify=False, headers=headers)
-        else:
-            resp = requests.get(url, timeout=self.timeout, verify=False, headers=headers)
-        return resp
+        try:
+            if data:
+                resp = requests.post(url, data=data,timeout=self.timeout, verify=False, headers=headers)
+            else:
+                resp = requests.get(url, timeout=self.timeout, verify=False, headers=headers)
+            return resp
+        except Exception as e:
+            print(f"Request error: {e}")
+            sys.exit(1)
+
 
     def buildnumber_to_version(self, BuildNumber):
         #Reference:https://docs.microsoft.com/en-us/Exchange/new-features/build-numbers-and-release-dates?redirectedfrom=MSDN&view=exchserver-2019
@@ -169,7 +199,7 @@ class owa_info():
             if o.scheme == "https":
                 self.ssl = True
             self.hostname = o.netloc
-            self.url = f'{o.scheme}://{o.netloc}/'
+            self.url = f'{o.scheme}://{o.netloc}'
             return True
         else:
             print("[-] Target must be an HTTP(S) URL")
@@ -194,9 +224,13 @@ class owa_info():
                     self.host = self.hostname
                     self.port = 443
                     ssl_sock.connect((self.hostname, 443))
-                fetch = f"GET /{path} HTTP/1.0\r\n\r\n"
+                fetch = f"GET /{path} HTTP/1.0\r\n"
+                fetch += f"User-Agent: {self.get_random_ua()}\r\n"
+                fetch += "Accept-Encoding: gzip, deflate, br\r\n"
+                fetch += "Accept: */*\r\n"
+                fetch += "Connection: close\r\n\r\n"
                 if self.debug:
-                    print(f"[*] Fetching: {self.url}{path}")
+                    print(f"[*] Fetching: {self.url}/{path}")
                 ssl_sock.write(fetch.encode())
                 data = ssl_sock.read()
                 ssl_sock.close()
@@ -226,9 +260,13 @@ class owa_info():
                     self.host = self.hostname
                     self.port = 80
                     s.connect((self.hostname, 80))
-                fetch = f"GET /{path} HTTP/1.0\r\n\r\n"
+                fetch = f"GET /{path} HTTP/1.0\r\n"
+                fetch += f"User-Agent: {self.get_random_ua()}\r\n"
+                fetch += "Accept-Encoding: gzip, deflate, br\r\n"
+                fetch += "Accept: */*\r\n"
+                fetch += "Connection: close\r\n\r\n"
                 if self.debug:
-                    print(f"[*] Fetching: {self.url}{path}")
+                    print(f"[*] Fetching: {self.url}/{path}")
                 s.write(fetch.encode())
                 data = s.read()
                 s.close()
