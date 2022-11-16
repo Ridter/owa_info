@@ -1,8 +1,5 @@
 #! /usr/bin/env python
-
-from email import header
 import socket
-from time import time
 import requests
 import re
 import ssl
@@ -16,6 +13,7 @@ from OpenSSL import SSL
 from cryptography import x509
 from urllib.parse import urlparse
 from cryptography.x509.oid import NameOID
+import lxml.html as lh
 from collections import namedtuple
 from base64 import b64decode
 from struct import unpack
@@ -436,14 +434,58 @@ class owa_info():
         else:
             return
 
+
+def fetch_information():
+    unique_versions = {}
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
+        }
+        url = "https://docs.microsoft.com/en-us/exchange/new-features/build-numbers-and-release-dates"
+        response = requests.get(url, verify=False, headers=headers)
+        print("[*] Try to access " + url)
+        doc = lh.fromstring(response.content)
+        tr_elements = doc.xpath('//tr')
+        for i in range(1, len(tr_elements)):
+            row = tr_elements[i]
+            if len(row) != 4 or row[0].text_content() == "" or row[0].text_content() == "Product name":
+                continue
+            # grab release details url if exists
+            url = ""
+            if len(row[0]) > 0 and row[0][0].tag == 'a':
+                url = row[0][0].attrib['href'].strip()
+            # cells in row
+            # 0: Product name -> name
+            # 1: Release date -> release_date
+            # 2: Build number(short format) -> build
+            # 3: Build number(long format) -> build_long
+            v = {
+                'name': row[0].text_content().strip(),
+                'release_date': row[1].text_content().strip(),
+                'build': row[2].text_content().strip(),
+                'build_long': row[3].text_content().strip(),
+                'url': url
+            }
+
+            unique_versions[v['build']] = v
+    except Exception as e:
+        print("Renew dict error, error: {}".format(e))
+    return unique_versions
+
+
 def main():
     parser = argparse.ArgumentParser(description="OWA Info Scanner")
-    parser.add_argument('-u','--url', help='Exchange OWA URL', required=True)
-    parser.add_argument('-t','--timeout', help='Timeout', default=10, required=False)
-    parser.add_argument('-d','--debug', action='store_true',help='Print Debug info', default=False, required=False)
+    parser.add_argument('-u', '--url', help='Exchange OWA URL', required=True)
+    parser.add_argument('-t', '--timeout', help='Timeout', default=10, required=False)
+    parser.add_argument('-d', '--debug', action='store_true',help='Print Debug info', default=False, required=False)
     args = parser.parse_args()
+    unique_versions = fetch_information()
+    if unique_versions:
+        with open("ms-exchange-unique-versions-dict.json", "w") as f:
+            f.write(json.dumps(unique_versions))
     ex = owa_info(args.url, args.debug, args.timeout)
     ex.run()
-    
+
+
 if __name__ == "__main__":
     main()
