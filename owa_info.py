@@ -378,23 +378,26 @@ class owa_info():
         return domain_name, computer_name
 
     def get_domain_info(self):
-        headers = {
-            'Authorization': 'Negotiate TlRMTVNTUAABAAAAl4II4gAAAAAAAAAAAAAAAAAAAAAKALpHAAAADw==',
-            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.517 Safari/537.36'
-        }
-        r = self.req(f'{self.url}/rpc/', headers=headers)
-        assert r.status_code == 401, "Error while getting ComputerName"
-        auth_header = r.headers['WWW-Authenticate']
-        auth = re.search('Negotiate ([A-Za-z0-9/+=]+)', auth_header).group(1)
-        domain_name, computer_name = self.parse_challenge(b64decode(auth))
-        LOCAL_NAME = computer_name
-        FQDN = ".".join(LOCAL_NAME.split(".")[1:])
-        if self.debug:
-            print("[*] DomainName: {}".format(domain_name))
-        print(f'''[*] Domain info:
-\tDomain FQDN   = {FQDN}
-\tExchagne Computer Name = {computer_name}
-''')
+        try:
+            headers = {
+                'Authorization': 'Negotiate TlRMTVNTUAABAAAAl4II4gAAAAAAAAAAAAAAAAAAAAAKALpHAAAADw==',
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.517 Safari/537.36'
+            }
+            r = self.req(f'{self.url}/rpc/', headers=headers)
+            assert r.status_code == 401, "Error while getting ComputerName"
+            auth_header = r.headers['WWW-Authenticate']
+            auth = re.search('Negotiate ([A-Za-z0-9/+=]+)', auth_header).group(1)
+            domain_name, computer_name = self.parse_challenge(b64decode(auth))
+            LOCAL_NAME = computer_name
+            FQDN = ".".join(LOCAL_NAME.split(".")[1:])
+            if self.debug:
+                print("[*] DomainName: {}".format(domain_name))
+            print(f'''[*] Domain info:
+    \tDomain FQDN   = {FQDN}
+    \tExchagne Computer Name = {computer_name}
+    ''')
+        except Exception as e: 
+            pass
 
     def run(self):
         if self.testUrl():
