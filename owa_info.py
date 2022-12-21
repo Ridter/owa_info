@@ -434,7 +434,7 @@ class owa_info():
                     hostinfo = self.get_certificate(self.host, self.port)
                     self.print_basic_info(hostinfo)  
                 except Exception as e:
-                    print("Can't get certificate info.")
+                    print("[-] Can't get certificate info.")
         else:
             return
 
