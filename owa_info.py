@@ -430,10 +430,11 @@ class owa_info():
                     except:
                         continue
             if self.ssl and self.host:
-                hostinfo = self.get_certificate(self.host, self.port)
-                self.print_basic_info(hostinfo)  
-            
-            
+                try:
+                    hostinfo = self.get_certificate(self.host, self.port)
+                    self.print_basic_info(hostinfo)  
+                except Exception as e:
+                    print("Can't get certificate info.")
         else:
             return
 
