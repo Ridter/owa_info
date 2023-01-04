@@ -487,7 +487,7 @@ def main():
     if unique_versions:
         with open("ms-exchange-unique-versions-dict.json", "w") as f:
             f.write(json.dumps(unique_versions))
-    ex = owa_info(args.url, args.debug, args.timeout)
+    ex = owa_info(args.url, args.debug, int(args.timeout))
     ex.run()
 
 
