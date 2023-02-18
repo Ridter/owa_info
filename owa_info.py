@@ -17,8 +17,23 @@ import lxml.html as lh
 from collections import namedtuple
 from base64 import b64decode
 from struct import unpack
+from datetime import datetime
+
 
 HostInfo = namedtuple(field_names='cert hostname peername', typename='HostInfo')
+
+vularray = [
+    ["CVE-2020-0688", "02/11/2020"],
+    ["CVE-2021-26855+CVE-2021-27065", "03/02/2021"],
+    ["CVE-2021-28482", "04/13/2021"],
+    ["CVE-2021-34473+CVE-2021-34523+CVE-2021-31207", "04/13/2021"],
+    ["CVE-2021-31195+CVE-2021-31196", "05/11/2021"],
+    ["CVE-2021-31206", "07/13/2021"],
+    ["CVE-2021-42321", "11/09/2021"],
+    ["CVE-2022-23277", "03/08/2022"],
+    ["CVE-2022-41040+CVE-2022-41082", "29/09/2022"],
+    ["CVE-2023-21529+CVE-2023-21706", "13/02/2023"],
+]
 
 class owa_info():
     def __init__(self, target, debug=False, timeout=5):
@@ -66,16 +81,16 @@ class owa_info():
 
         return versions
 
-    def req(self, url, data=None, headers=None):
+    def req(self, url, data=None, headers=None, redirects=True):
         if not headers:
             headers = {
                 'User-Agent': self.get_random_ua(),
             }
         try:
             if data:
-                resp = requests.post(url, data=data,timeout=self.timeout, verify=False, headers=headers)
+                resp = requests.post(url, data=data,timeout=self.timeout, verify=False, headers=headers, allow_redirects=redirects)
             else:
-                resp = requests.get(url, timeout=self.timeout, verify=False, headers=headers)
+                resp = requests.get(url, timeout=self.timeout, verify=False, headers=headers, allow_redirects=redirects)
             return resp
         except Exception as e:
             print(f"Request error: {e}")
@@ -161,6 +176,39 @@ class owa_info():
 
         return None
 
+    def vulscan(self, date):
+        print("[*] Checking Vulnerabilities by Version...\n")
+        count = 0
+        try:
+            for value in vularray:
+                if (date.split('/')[2] < value[1].split('/')[2]):
+                    print("[+] " + value[0] + ", " + value[1])
+                    count += 1
+                else:
+                    if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[0] < value[1].split('/')[0]):
+                        print("[+] " + value[0] + ", " + value[1])
+                        count += 1
+                    else:
+                        if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[0] == value[1].split('/')[0]) & (date.split('/')[1] < value[1].split('/')[1]):
+                            print("[+] " + value[0] + ", " + value[1])
+                            count += 1
+        except Exception as e:
+            pass
+        print()
+        if count > 0:
+            print(f"[*] We found {count} vuls! 🎉")
+        else:
+            print("[-] No vul found. ~~>_<~~")
+
+    def get_build_via_headers(self, url):
+        urls = ["EWS/Exchange.asmx", "OWA/"]
+        for uri in urls:
+            r = self.req(f'{url}/{uri}', redirects=False)
+            if "X-OWA-Version" in r.headers:
+                version = r.headers['X-OWA-Version']
+                return version
+        return None
+
     def get_owa_build(self, url):
         r = self.req(f'{url}/owa/')
 
@@ -178,10 +226,12 @@ class owa_info():
             if(result):
                 build = result.group(1)
         if build is not None:
-            ecp_build = self.get_build_via_exporttool(url, build)
-            if ecp_build is not None:
+            more_build = self.get_build_via_headers(url)
+            if not more_build:
+                more_build = self.get_build_via_exporttool(url, build)
+            if more_build is not None:
                 try:
-                    return self.versions[ecp_build]
+                    return self.versions[more_build]
                 except:
                     return {'build': build, 'name': self.buildnumber_to_version(build)} 
             else:
@@ -435,6 +485,12 @@ class owa_info():
                     self.print_basic_info(hostinfo)  
                 except Exception as e:
                     print("[-] Can't get certificate info.")
+            
+            if ex_version.get("release_date"):
+                date_string = ex_version.get("release_date") 
+                date_object = datetime.strptime(date_string, "%B %d, %Y") 
+                formatted_date = date_object.strftime("%m/%d/%Y") 
+                self.vulscan(formatted_date)
         else:
             return
 
