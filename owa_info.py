@@ -31,12 +31,12 @@ vularray = [
     ["CVE-2021-31206", "07/13/2021"],
     ["CVE-2021-42321", "11/09/2021"],
     ["CVE-2022-23277", "03/08/2022"],
-    ["CVE-2022-41040+CVE-2022-41082", "29/09/2022"],
-    ["CVE-2023-21529+CVE-2023-21706", "13/02/2023"],
+    ["CVE-2022-41040+CVE-2022-41082", "30/9/2022"],
+    ["CVE-2023-21529+CVE-2023-21706", "14/02/2023"],
 ]
 
 class owa_info():
-    def __init__(self, target, debug=False, timeout=5):
+    def __init__(self, target, debug=False, timeout=5, noip=False):
         self.target   = target
         self.debug    = debug
         self.ssl      = False
@@ -48,6 +48,7 @@ class owa_info():
                          "Microsoft-Server-ActiveSync", "Microsoft-Server-ActiveSync/default.eas",
                          "ECP", "EWS", "EWS/Exchange.asmx","Exchange", "OWA"]
         self.versions = self.get_versions_map()
+        self.noip = noip
 
 
     def get_random_ua(self):
@@ -181,14 +182,17 @@ class owa_info():
         count = 0
         try:
             for value in vularray:
+                # year
                 if (date.split('/')[2] < value[1].split('/')[2]):
                     print("[+] " + value[0] + ", " + value[1])
                     count += 1
                 else:
+                    # month
                     if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[0] < value[1].split('/')[0]):
                         print("[+] " + value[0] + ", " + value[1])
                         count += 1
                     else:
+                        # day
                         if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[0] == value[1].split('/')[0]) & (date.split('/')[1] < value[1].split('/')[1]):
                             print("[+] " + value[0] + ", " + value[1])
                             count += 1
@@ -467,18 +471,18 @@ class owa_info():
             if ex_version.get("url"):
                 print(f"\tDownload URL: {ex_version['url']}")
             self.get_domain_info()
-            
-            if self.ssl:
-                results = self.sslHost()        
-            else:
-                results = self.plainHost()
-            if len(results) > 0:
-                for ip in results:
-                    try:
-                        if ipaddress.ip_address(ip).is_private:
-                            print(f"[+] Internal ip:\n\t👉  {ip}")
-                    except:
-                        continue
+            if not self.noip:
+                if self.ssl:
+                    results = self.sslHost()        
+                else:
+                    results = self.plainHost()
+                if len(results) > 0:
+                    for ip in results:
+                        try:
+                            if ipaddress.ip_address(ip).is_private:
+                                print(f"[+] Internal ip:\n\t👉  {ip}")
+                        except:
+                            continue
             if self.ssl and self.host:
                 try:
                     hostinfo = self.get_certificate(self.host, self.port)
@@ -489,7 +493,7 @@ class owa_info():
             if ex_version.get("release_date"):
                 date_string = ex_version.get("release_date") 
                 date_object = datetime.strptime(date_string, "%B %d, %Y") 
-                formatted_date = date_object.strftime("%m/%d/%Y") 
+                formatted_date = date_object.strftime("%d/%m/%Y") 
                 self.vulscan(formatted_date)
         else:
             return
@@ -537,13 +541,14 @@ def main():
     parser = argparse.ArgumentParser(description="OWA Info Scanner")
     parser.add_argument('-u', '--url', help='Exchange OWA URL', required=True)
     parser.add_argument('-t', '--timeout', help='Timeout', default=10, required=False)
+    parser.add_argument('-n', '--noip', action='store_true',help='Don\'t check ip info.', default=False, required=False)
     parser.add_argument('-d', '--debug', action='store_true',help='Print Debug info', default=False, required=False)
     args = parser.parse_args()
     unique_versions = fetch_information()
     if unique_versions:
         with open("ms-exchange-unique-versions-dict.json", "w") as f:
             f.write(json.dumps(unique_versions))
-    ex = owa_info(args.url, args.debug, int(args.timeout))
+    ex = owa_info(args.url, args.debug, int(args.timeout), args.noip)
     ex.run()
 
 
