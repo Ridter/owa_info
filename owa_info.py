@@ -251,6 +251,13 @@ class owa_info():
             if o.scheme == "https":
                 self.ssl = True
             self.hostname = o.netloc
+            if ":" in self.hostname:
+                host, port = self.hostname.split(":")
+                self.host = host
+                self.port = int(port)
+            else:
+                self.host = self.hostname
+                self.port = 443
             self.url = f'{o.scheme}://{o.netloc}'
             return True
         else:
@@ -269,11 +276,9 @@ class owa_info():
                 ssl_sock = ssl.wrap_socket(s, ca_certs=None)
                 if ":" in self.hostname:
                     host, port = self.hostname.split(":")
-                    self.host = host
                     self.port = port
                     ssl_sock.connect((host, int(port)))
                 else:
-                    self.host = self.hostname
                     self.port = 443
                     ssl_sock.connect((self.hostname, 443))
                 fetch = f"GET /{path} HTTP/1.0\r\n"
@@ -305,11 +310,9 @@ class owa_info():
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 if ":" in self.hostname:
                     host, port = self.hostname.split(":")
-                    self.host = host
                     self.port = port
                     s.connect((host, int(port)))
                 else:
-                    self.host = self.hostname
                     self.port = 80
                     s.connect((self.hostname, 80))
                 fetch = f"GET /{path} HTTP/1.0\r\n"
@@ -483,7 +486,7 @@ class owa_info():
                                 print(f"[+] Internal ip:\n\t👉  {ip}")
                         except:
                             continue
-            if self.ssl and self.host:
+            if self.ssl:
                 try:
                     hostinfo = self.get_certificate(self.host, self.port)
                     self.print_basic_info(hostinfo)  
