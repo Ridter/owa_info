@@ -18,6 +18,9 @@ from collections import namedtuple
 from base64 import b64decode
 from struct import unpack
 from datetime import datetime
+from urllib3.exceptions import InsecureRequestWarning
+from urllib3 import disable_warnings
+disable_warnings(InsecureRequestWarning)
 
 
 HostInfo = namedtuple(field_names='cert hostname peername', typename='HostInfo')
