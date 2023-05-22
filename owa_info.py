@@ -34,7 +34,7 @@ vularray = [
     ["CVE-2021-31206", "07/13/2021"],
     ["CVE-2021-42321", "11/09/2021"],
     ["CVE-2022-23277", "03/08/2022"],
-    ["CVE-2022-41040+CVE-2022-41082", "30/9/2022"],
+    ["CVE-2022-41040+CVE-2022-41082", "30/09/2022"],
     ["CVE-2023-21529+CVE-2023-21706", "14/02/2023"],
 ]
 
@@ -181,7 +181,7 @@ class owa_info():
         return None
 
     def vulscan(self, date):
-        print("[*] Checking Vulnerabilities by Version...\n")
+        print(f"[*] Checking vulnerabilities by version, current date: {date}.\n")
         count = 0
         try:
             for value in vularray:
@@ -191,12 +191,12 @@ class owa_info():
                     count += 1
                 else:
                     # month
-                    if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[0] < value[1].split('/')[0]):
+                    if (date.split('/')[2] == value[1].split('/')[2]) and (date.split('/')[1] < value[1].split('/')[1]):
                         print("[+] " + value[0] + ", " + value[1])
                         count += 1
                     else:
                         # day
-                        if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[0] == value[1].split('/')[0]) & (date.split('/')[1] < value[1].split('/')[1]):
+                        if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[1] == value[1].split('/')[1]) & (date.split('/')[0] < value[1].split('/')[0]):
                             print("[+] " + value[0] + ", " + value[1])
                             count += 1
         except Exception as e:
