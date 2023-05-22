@@ -191,7 +191,7 @@ class owa_info():
                     count += 1
                 else:
                     # month
-                    if (date.split('/')[2] == value[1].split('/')[2]) and (date.split('/')[1] < value[1].split('/')[1]):
+                    if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[1] < value[1].split('/')[1]):
                         print("[+] " + value[0] + ", " + value[1])
                         count += 1
                     else:
