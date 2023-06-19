@@ -37,6 +37,7 @@ vularray = [
     ["CVE-2022-23277", "08/03/2022"],
     ["CVE-2022-41040+CVE-2022-41082", "30/09/2022"],
     ["CVE-2023-21529+CVE-2023-21706", "14/02/2023"],
+    ["CVE-2023-28310","13/06/2023"]
 ]
 
 class owa_info():
@@ -209,19 +210,21 @@ class owa_info():
             print("[-] No vul found. ~~>_<~~")
 
     def get_build_via_headers(self, url):
-        urls = ["EWS/Exchange.asmx", "OWA/"]
+        urls = ["owa/", "EWS/Exchange.asmx"]
         for uri in urls:
             r = self.req(f'{url}/{uri}', redirects=False)
             if "X-OWA-Version" in r.headers:
                 version = r.headers['X-OWA-Version']
+                print(f"[*] Get version from {uri} header")
                 return version
         return None
 
     def get_owa_build(self, url):
         r = self.req(f'{url}/owa/')
 
-        # x-owa-version header method
+        # x-owa-version header with redirect
         if r.headers.get("x-owa-version"):
+            print("[*] Get version from owa header")
             return self.versions[r.headers["x-owa-version"]]
 
         # get partial build from urls
@@ -237,6 +240,8 @@ class owa_info():
             more_build = self.get_build_via_headers(url)
             if not more_build:
                 more_build = self.get_build_via_exporttool(url, build)
+                if more_build:
+                    print(f"[*] Get version from exporttool")
             if more_build is not None:
                 try:
                     return self.versions[more_build]
