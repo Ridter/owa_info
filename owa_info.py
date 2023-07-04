@@ -26,18 +26,22 @@ disable_warnings(InsecureRequestWarning)
 HostInfo = namedtuple(field_names='cert hostname peername', typename='HostInfo')
 
 # day/month/year format
+# version map
+# 2010 14
+# > 2010 15
 vularray = [
-    ["CVE-2020-0688", "11/02/2020"],
-    ["CVE-2021-26855+CVE-2021-27065", "02/03/2021"],
-    ["CVE-2021-28482", "13/04/2021"],
-    ["CVE-2021-34473+CVE-2021-34523+CVE-2021-31207", "13/04/2021"],
-    ["CVE-2021-31195+CVE-2021-31196", "11/05/2021"],
-    ["CVE-2021-31206", "13/07/2021"],
-    ["CVE-2021-42321", "09/11/2021"],
-    ["CVE-2022-23277", "08/03/2022"],
-    ["CVE-2022-41040+CVE-2022-41082", "30/09/2022"],
-    ["CVE-2023-21529+CVE-2023-21706", "14/02/2023"],
-    ["CVE-2023-28310","13/06/2023"]
+    ["CVE-2020-0688", "11/02/2020", "14.3|15.0|15.1|15.2"],
+    ["CVE-2020-17144", "08/21/2020", "14.3"],
+    ["CVE-2021-26855+CVE-2021-27065", "02/03/2021", "15.0|15.1|15.2"],
+    ["CVE-2021-28482", "13/04/2021", "15.0|15.1|15.2"],
+    ["CVE-2021-31207+CVE-2021-31195", "11/05/2021", "15.0|15.1|15.2"],
+    ["CVE-2021-34473+CVE-2021-34523+CVE-2021-31196+CVE-2021-31206", "13/07/2021", "15.0|15.1|15.2"],
+    ["CVE-2021-42321", "09/11/2021", "15.1|15.2"],
+    ["CVE-2022-23277", "08/03/2022", "15.0|15.1|15.2"],
+    ["CVE-2022-41040+CVE-2022-41082", "30/09/2022", "15.0|15.1|15.2"],
+    ["CVE-2022-41080", "08/11/2022", "15.0|15.1|15.2"],
+    ["CVE-2023-21529+CVE-2023-21706", "14/02/2023", "15.0|15.1|15.2"],
+    ["CVE-2023-28310","13/06/2023", "15.1|15.2"]
 ]
 
 class owa_info():
@@ -182,23 +186,23 @@ class owa_info():
 
         return None
 
-    def vulscan(self, date):
-        print(f"[*] Checking vulnerabilities by version, current date: {date}.\n")
+    def vulscan(self, date, version):
+        print(f"[*] Checking vulnerabilities by version, current date: {date}, version: {version}\n")
         count = 0
         try:
             for value in vularray:
                 # year
-                if (date.split('/')[2] < value[1].split('/')[2]):
+                if (date.split('/')[2] < value[1].split('/')[2]) and version in value[2]:
                     print("[+] " + value[0] + ", " + value[1])
                     count += 1
                 else:
                     # month
-                    if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[1] < value[1].split('/')[1]):
+                    if (date.split('/')[2] == value[1].split('/')[2]) and (date.split('/')[1] < value[1].split('/')[1]) and version in value[2]:
                         print("[+] " + value[0] + ", " + value[1])
                         count += 1
                     else:
                         # day
-                        if (date.split('/')[2] == value[1].split('/')[2]) & (date.split('/')[1] == value[1].split('/')[1]) & (date.split('/')[0] < value[1].split('/')[0]):
+                        if (date.split('/')[2] == value[1].split('/')[2]) and (date.split('/')[1] == value[1].split('/')[1]) and (date.split('/')[0] < value[1].split('/')[0]) and version in value[2]:
                             print("[+] " + value[0] + ", " + value[1])
                             count += 1
         except Exception as e:
@@ -501,12 +505,15 @@ class owa_info():
                     self.print_basic_info(hostinfo)  
                 except Exception as e:
                     print("[-] Can't get certificate info.")
+            if int(ex_version.get("build").split(".")[0]) < 14:
+                print("[*] Old Exchange detect, return..")
+                return
             
             if ex_version.get("release_date"):
                 date_string = ex_version.get("release_date") 
                 date_object = datetime.strptime(date_string, "%B %d, %Y") 
                 formatted_date = date_object.strftime("%d/%m/%Y") 
-                self.vulscan(formatted_date)
+                self.vulscan(formatted_date, ".".join(ex_version.get("build").split(".")[0:2]))
         else:
             return
 
