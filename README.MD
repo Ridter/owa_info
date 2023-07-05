@@ -39,6 +39,26 @@ microsoft exchange 2010：
 app="Microsoft-Exchange-2010-POP3-server-version-03.1"||app="Microsoft-Exchange-Server-2010"
 ```
 
+
+## IIS 通过401/30X获取内网IP
+Usage: 
+```
+Use to get the internal ip of IIS.
+
+options:
+  -h, --help         show this help message and exit
+  -u URL, --url URL  target url
+```
+
+example：
+```
+╰─❯ python get_internal_ip.py -u https://exchange.cgdomain.com/owa/
+[*] Try to access https://exchange.cgdomain.com/owa
+[*] Try to access https://exchange.cgdomain.com/owa/
+[+] Internal ip:
+	👉  10.211.55.201
+```
+
 ## HealthChecker
 对于运维人员，可使用以下脚本来检测自己Exchange服务器是否存在漏洞。
 

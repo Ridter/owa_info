@@ -53,9 +53,12 @@ class owa_info():
         self.url      = ""
         self.host     = None
         self.port     = None
-        self.paths    = ["Autodiscover/", "Autodiscover/Autodiscover.xml",
-                         "Microsoft-Server-ActiveSync", "Microsoft-Server-ActiveSync/default.eas",
-                         "ECP", "EWS", "EWS/Exchange.asmx","Exchange", "OWA"]
+        self.results  = []
+        self.paths    = ["/owa",
+                        "/autodiscover/autodiscover.xml",
+                        "/exchange",
+                        "/ecp",
+                        "/aspnet_client"]
         self.versions = self.get_versions_map()
         self.noip = noip
 
@@ -276,13 +279,24 @@ class owa_info():
         else:
             print("[-] Target must be an HTTP(S) URL")
             return False
+        
+    def get_internal_ip(self, text):
+        try:
+            match_realm = re.search(r"realm=\"(.*)\"", text)
+            if match_realm and match_realm.groups()[0] not in self.results:
+                self.results.append(match_realm.groups()[0])
+            match_location = re.search(r"Location:\s*https?://(\d+\.\d+\.\d+\.\d+)", text, re.IGNORECASE)
+            if match_location and match_location.groups()[0] not in self.results:
+                self.results.append(match_location.groups()[0])
+        except Exception as e:
+            pass
+
 
     def sslHost(self):
         """
         OWA will almost always be via SSL so this should be the most common function
         """
         data = None
-        results = [] # We may encounter a situation where we get IPs and hostnames
         for path in self.paths:
             try:
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -294,30 +308,27 @@ class owa_info():
                 else:
                     self.port = 443
                     ssl_sock.connect((self.hostname, 443))
+                #print(f"[*] Try to access {path}")
                 fetch = f"GET /{path} HTTP/1.0\r\n"
                 fetch += f"User-Agent: {self.get_random_ua()}\r\n"
                 fetch += "Accept-Encoding: gzip, deflate, br\r\n"
                 fetch += "Accept: */*\r\n"
                 fetch += "Connection: close\r\n\r\n"
                 if self.debug:
-                    print(f"[*] Fetching: {self.url}/{path}")
+                    print(f"[*] Fetching: {self.url}{path}")
                 ssl_sock.write(fetch.encode())
                 data = ssl_sock.read()
                 ssl_sock.close()
                 if data:
-                    ret = re.search(r"realm=\"(.*)\"", data.decode())
-                    if ret and ret.groups()[0] not in results:
-                        results.append(ret.groups()[0])
+                    self.get_internal_ip(data.decode())
             except Exception as e:
                 continue
-        return results
 
     def plainHost(self):
         """
         Hopefully there's no OWA running without SSL exposed to the internet, but you never know
         """
         data = None
-        results = []
         for path in self.paths:
             try:
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -328,6 +339,7 @@ class owa_info():
                 else:
                     self.port = 80
                     s.connect((self.hostname, 80))
+                #print(f"[*] Try to access {path}")
                 fetch = f"GET /{path} HTTP/1.0\r\n"
                 fetch += f"User-Agent: {self.get_random_ua()}\r\n"
                 fetch += "Accept-Encoding: gzip, deflate, br\r\n"
@@ -339,12 +351,9 @@ class owa_info():
                 data = s.read()
                 s.close()
                 if data:
-                    ret = re.search(r"realm=\"(.*)\"", data.decode())
-                    if ret and ret.groups()[0] not in results:
-                        results.append(ret.groups()[0])
+                    self.get_internal_ip(data.decode())
             except Exception as e:
                 continue
-        return results
 
 
     def get_common_name(self, cert):
@@ -489,11 +498,11 @@ class owa_info():
             self.get_domain_info()
             if not self.noip:
                 if self.ssl:
-                    results = self.sslHost()        
+                    self.sslHost()        
                 else:
-                    results = self.plainHost()
-                if len(results) > 0:
-                    for ip in results:
+                    self.plainHost()
+                if len(self.results) > 0:
+                    for ip in self.results:
                         try:
                             if ipaddress.ip_address(ip).is_private:
                                 print(f"[+] Internal ip:\n\t👉  {ip}")
